@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit - St. John Ambulance Malaysia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo">
+                    <div class="logo-circle">
+                        <img src="img/st-john-ambulans-malaysia-logo.png" alt="St John Ambulans Logo"
+                            class="logo-image">
+                    </div>
+                    <div class="logo-text">
+                        <h1>St John Ambulans Malaysia
+                        Selangor Darul Ehsan</h1>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about-us.html" class="nav-link">About Us</a></li>
+                    <li><a href="service.html" class="nav-link">Services</a></li>
+                    <li><a href="activities.html" class="nav-link">Activities</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="submit.html" class="nav-link active">Submit</a></li>
+                </ul>
+                <a href="donate.html" class="donate-btn">DONATE</a>
+            </nav>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="login-container">
+            <form class="login-form">
+                <div class="form-tabs">
+                    <button type="button" class="tab-btn active" data-tab="login">Login</button>
+                    <button type="button" class="tab-btn" data-tab="forgot">Forgot?</button>
+                </div>
+
+                <div class="tab-content active" id="login">
+                    <div class="form-header">
+                        <h2>Have an account?</h2>
+                        <p>Log in or sign up! It's fast & free!</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" class="form-input" placeholder="Enter your username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" class="form-input" placeholder="Enter your password">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="remember">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                    </div>
+
+                    <button type="submit" class="login-btn">Login</button>
+                </div>
+
+                <div class="tab-content" id="forgot">
+                    <div class="form-header">
+                        <h2>Forgot your password?</h2>
+                        <p>Enter your username or email to reset it</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reset-username">Username or Email:</label>
+                        <input type="text" id="reset-username" class="form-input" placeholder="Enter your username or email">
+                    </div>
+
+                    <button type="submit" class="reset-btn">Reset my password</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>St John Ambulans Malaysia</h4>
+                    <h5>Selangor Darul Ehsan</h5>
+                    <p>Bangunan Yeo Cheng Swee</p>
+                    <p>2984-A, Persiaran Raja Muda Musa</p>
+                    <p>41100 Klang, Selangor Darul Ehsan</p>
+                    <p>Tel: 603 3373 5005/ 603 3374 5005</p>
+                    <p>Fax: 603 3372 4898</p>
+                    <p>Mobile: +6017-969 4235</p>
+                    <p>Email: sjamselangor@sjam.org.my</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>ABOUT US</h4>
+                    <ul>
+                        <li>History and Introduction</li>
+                        <li>Organisation Structure</li>
+                        <li>ISO9001</li>
+                        <li>Grand Prior Holders</li>
+                        <li>Qualified First Aid Trainers</li>
+                        <li>Meritorious Bar</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>SERVICES</h4>
+                    <ul>
+                        <li>Ambulance Service</li>
+                        <li>Haemodialysis Service</li>
+                        <li>Public Duties StandBy</li>
+                        <li>Public First Aid Course</li>
+                        <li>Store Supplies</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>ACTIVITIES</h4>
+                    <ul>
+                        <li>Rakan St John</li>
+                        <li>Cadet Activities / Grand Prior Badge</li>
+                        <li>Mock Exercise</li>
+                        <li>Program</li>
+                        <li>Foreign Affair</li>
+                        <li>Humanitarian</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetTab = btn.getAttribute('data-tab');
+                
+                // Remove active class from all tabs and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                btn.classList.add('active');
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+
+        // Form submission handling
+        const loginForm = document.querySelector('.login-form');
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add your form submission logic here
+            console.log('Form submitted');
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

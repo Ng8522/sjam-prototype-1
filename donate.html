@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St John Ambulans Malaysia Selangor Darul Ehsan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo">
+                    <div class="logo-circle">
+                        <img src="img/st-john-ambulans-malaysia-logo.png" alt="St John Ambulans Logo"
+                            class="logo-image">
+                    </div>
+                    <div class="logo-text">
+                        <h1>St John Ambulans Malaysia
+                        Selangor Darul Ehsan</h1>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about-us.html" class="nav-link">About Us</a></li>
+                    <li><a href="service.html" class="nav-link">Services</a></li>
+                    <li><a href="activities.html" class="nav-link">Activities</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="submit.html" class="nav-link">Submit</a></li>
+                </ul>
+                <a href="donate.html" class="donate-btn">DONATE</a>
+            </nav>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="donation-hero">
+        <div class="hero-banner">
+            <img src="img/banner-donate.jpg" alt="Donation Banner" class="hero-image">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Make a Difference Today</h1>
+                    <p>Your donation helps us provide emergency medical services and save lives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form Section -->
+    <section class="donation-section">
+        <div class="donation-container">
+            <div class="donation-form-wrapper">
+                <div class="form-header">
+                    <h1>Please fill in every field for tax exempted receipt issuance</h1>
+                    <p>Your donation helps us continue our mission of providing emergency medical services</p>
+                </div>
+
+                <form class="donation-form" id="donationForm">
+                    <!-- Donor Category -->
+                    <div class="form-group">
+                        <label class="form-label">Donor is under which category?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="donorCategory" value="individual" required>
+                                <span class="radio-custom"></span>
+                                Individual
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="donorCategory" value="company" required>
+                                <span class="radio-custom"></span>
+                                Company
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Company Registration Name -->
+                    <div class="form-group" id="companyNameGroup" style="display: none;">
+                        <label for="companyName" class="form-label">Company Registration Name</label>
+                        <input type="text" id="companyName" name="companyName" class="form-input">
+                        <small class="form-note">(Note: This will appear on the receipt.)</small>
+                    </div>
+
+                    <!-- Business Registration No -->
+                    <div class="form-group" id="businessRegGroup" style="display: none;">
+                        <label for="businessReg" class="form-label">Business Registration No</label>
+                        <input type="text" id="businessReg" name="businessReg" class="form-input">
+                        <small class="form-note">(Note: Business Registration No. is COMPULSORY for issuance of tax-exemption receipt in Malaysia.)</small>
+                    </div>
+
+                    <!-- Contact Person -->
+                    <div class="form-group">
+                        <label for="contactPerson" class="form-label">Contact Person</label>
+                        <input type="text" id="contactPerson" name="contactPerson" class="form-input" required>
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div class="form-group">
+                        <label for="contactNumber" class="form-label">Contact Number</label>
+                        <input type="tel" id="contactNumber" name="contactNumber" class="form-input" required>
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="form-group">
+                        <label for="emailAddress" class="form-label">Email Address <span class="required">*</span></label>
+                        <input type="email" id="emailAddress" name="emailAddress" class="form-input" required>
+                    </div>
+
+                    <!-- Postal Address -->
+                    <div class="form-group">
+                        <label for="postalAddress" class="form-label">Postal Address</label>
+                        <textarea id="postalAddress" name="postalAddress" class="form-textarea" rows="4" required></textarea>
+                        <small class="form-note">(Note: Tax Exempted Receipt will be post to this address.)</small>
+                    </div>
+
+                    <!-- Upload Proof of Payment -->
+                    <div class="form-group">
+                        <label for="proofOfPayment" class="form-label">Upload Proof of Payment</label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="proofOfPayment" name="proofOfPayment" class="file-input" accept="image/*,.pdf" required>
+                            <label for="proofOfPayment" class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Choose File</span>
+                            </label>
+                            <span class="file-name" id="fileName">No file chosen</span>
+                        </div>
+                    </div>
+
+                    <!-- Remark -->
+                    <div class="form-group">
+                        <label for="remark" class="form-label">Remark</label>
+                        <textarea id="remark" name="remark" class="form-textarea" rows="4"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>St John Ambulans Malaysia</h4>
+                    <h5>Selangor Darul Ehsan</h5>
+                    <p>Bangunan Yeo Cheng Swee</p>
+                    <p>2984-A, Persiaran Raja Muda Musa</p>
+                    <p>41100 Klang, Selangor Darul Ehsan</p>
+                    <p>Tel: 603 3373 5005/ 603 3374 5005</p>
+                    <p>Fax: 603 3372 4898</p>
+                    <p>Mobile: +6017-969 4235</p>
+                    <p>Email: sjamselangor@sjam.org.my</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>ABOUT US</h4>
+                    <ul>
+                        <li>History and Introduction</li>
+                        <li>Organisation Structure</li>
+                        <li>ISO9001</li>
+                        <li>Grand Prior Holders</li>
+                        <li>Qualified First Aid Trainers</li>
+                        <li>Meritorious Bar</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>SERVICES</h4>
+                    <ul>
+                        <li>Ambulance Service</li>
+                        <li>Haemodialysis Service</li>
+                        <li>Public Duties StandBy</li>
+                        <li>Public First Aid Course</li>
+                        <li>Store Supplies</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>ACTIVITIES</h4>
+                    <ul>
+                        <li>Rakan St John</li>
+                        <li>Cadet Activities / Grand Prior Badge</li>
+                        <li>Mock Exercise</li>
+                        <li>Program</li>
+                        <li>Foreign Affair</li>
+                        <li>Humanitarian</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
