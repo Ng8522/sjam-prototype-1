@@ -8,6 +8,7 @@
 /* Remove margins between sections */
 section {
     margin: 0;
+    padding: 1rem 0;
 }
 
 html {
@@ -23,19 +24,21 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 /* Header */
 .header {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     box-shadow: 0 4px 20px rgba(0, 158, 76, 0.15);
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 1000;
     border-bottom: 3px solid #009E4C;
 }
@@ -150,6 +153,7 @@ body {
     letter-spacing: 0.3px;
     text-decoration: none;
     font-size: 0.85rem;
+    margin-left: 1rem;
 }
 
 .donate-btn:hover {
@@ -202,7 +206,7 @@ body {
 .hero {
     background: linear-gradient(135deg, #009E4C 0%, #007a3d 100%);
     color: white;
-    padding: 0;
+    padding: 0 0 2rem 0;
     margin: 0;
     text-align: center;
 }
@@ -478,8 +482,8 @@ body {
 }
 
 .rakan-logo-circle {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
     background: linear-gradient(135deg, #009E4C 0%, #007a3d 100%);
     border-radius: 50%;
     display: flex;
@@ -492,8 +496,8 @@ body {
 }
 
 .rakan-logo-circle .logo-image {
-    width: 80px;
-    height: 80px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
     filter: brightness(1.1);
 }
@@ -1252,8 +1256,6 @@ body {
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     height: fit-content;
-    position: sticky;
-    top: 120px;
 }
 
 .sidebar-nav {
@@ -2175,27 +2177,29 @@ body {
 }
 
 .activities-sidebar {
-    position: sticky;
-    top: 2rem;
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     height: fit-content;
 }
 
 .activities-sidebar .sidebar-nav {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .activities-sidebar .nav-item {
     padding: 1.2rem 1.5rem;
-    border-bottom: 1px solid #f0f0f0;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .activities-sidebar .nav-item:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
 }
 
 .activities-sidebar .nav-item:hover {
@@ -3239,7 +3243,7 @@ body {
 /* Responsive Design for Additional Info */
 @media (max-width: 768px) {
     .additional-info {
-        padding: 4rem 0;
+        padding: 2rem 0;
     }
     
     .info-grid {
@@ -3263,7 +3267,7 @@ body {
 
 @media (max-width: 480px) {
     .additional-info {
-        padding: 3rem 0;
+        padding: 1.5rem 0;
     }
     
     .info-card {
@@ -3491,7 +3495,7 @@ body {
 
 /* Enhanced Additional Info Section */
 .additional-info {
-    padding: 6rem 0;
+    padding: 2rem 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
     position: relative;
 }
@@ -3510,8 +3514,8 @@ body {
 
 .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
@@ -3520,13 +3524,13 @@ body {
 
 .info-card {
     background: white;
-    border-radius: 20px;
-    padding: 2.5rem;
-    border: 3px solid transparent;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 2px solid transparent;
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .info-card::before {
@@ -3552,17 +3556,17 @@ body {
 }
 
 .info-icon {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background: linear-gradient(135deg, #009E4C 0%, #007a3d 100%);
-    border-radius: 20px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 12px 25px rgba(0, 158, 76, 0.3);
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 8px 20px rgba(0, 158, 76, 0.3);
     transition: all 0.3s ease;
 }
 
@@ -3572,18 +3576,18 @@ body {
 }
 
 .info-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #333;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     line-height: 1.3;
 }
 
 .info-content p {
     color: #666;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
 }
 
 .info-actions {
@@ -3662,7 +3666,7 @@ body {
 
 /* Enhanced Social Media and Foundation Section */
 .social-foundation {
-    padding: 6rem 0;
+    padding: 2rem 0;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     position: relative;
 }
@@ -3691,9 +3695,9 @@ body {
 
 .facebook-panel {
     background: white;
-    padding: 3rem;
-    border-radius: 24px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     border: 2px solid transparent;
     transition: all 0.4s ease;
     position: relative;
@@ -3728,8 +3732,8 @@ body {
 
 .facebook-panel h3 {
     color: #009E4C;
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -3738,14 +3742,14 @@ body {
 
 .facebook-panel h3 i {
     color: #1877f2;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 .post-header {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: #1877f2;
     font-weight: 600;
     padding: 1rem;
@@ -3826,7 +3830,7 @@ body {
 /* Responsive Design for Enhanced Sections */
 @media (max-width: 768px) {
     .additional-info {
-        padding: 4rem 0;
+        padding: 2rem 0;
     }
     
     .info-grid {
@@ -3848,7 +3852,7 @@ body {
     }
 
     .social-foundation {
-        padding: 4rem 0;
+        padding: 2rem 0;
     }
     
     .social-foundation-grid {
@@ -3876,7 +3880,7 @@ body {
 
 @media (max-width: 480px) {
     .additional-info {
-        padding: 3rem 0;
+        padding: 1.5rem 0;
     }
     
     .info-card {
