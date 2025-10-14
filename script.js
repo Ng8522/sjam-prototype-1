@@ -259,4 +259,36 @@ window.addEventListener('load', function() {
             }, 500);
         }, 1000);
     }
+
+    // Show only 3 images maximum, hide the rest
+    const eventItems = document.querySelectorAll('.event-item');
+    eventItems.forEach(item => {
+        const imageGrid = item.querySelector('.event-images-grid');
+        if (imageGrid) {
+            const images = imageGrid.querySelectorAll('.event-image:not(.more-images)');
+            const totalImages = images.length;
+            
+            // Hide images beyond the first 3
+            images.forEach((img, index) => {
+                if (index >= 3) {
+                    img.style.display = 'none';
+                }
+            });
+            
+            // Update "more images" text based on actual count
+            const moreImagesBtn = imageGrid.querySelector('.more-images span');
+            if (moreImagesBtn) {
+                if (totalImages > 3) {
+                    const remaining = totalImages - 3;
+                    moreImagesBtn.textContent = `+${remaining} More`;
+                } else {
+                    // Hide "more images" button if 3 or fewer images
+                    const moreImagesContainer = imageGrid.querySelector('.more-images');
+                    if (moreImagesContainer) {
+                        moreImagesContainer.style.display = 'none';
+                    }
+                }
+            }
+        }
+    });
 });
