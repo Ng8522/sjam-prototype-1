@@ -268,9 +268,9 @@ window.addEventListener('load', function() {
             const images = imageGrid.querySelectorAll('.event-image:not(.more-images)');
             const totalImages = images.length;
             
-            // Hide images beyond the first 3
+            // Hide images beyond the first 2
             images.forEach((img, index) => {
-                if (index >= 3) {
+                if (index >= 2) {
                     img.style.display = 'none';
                 }
             });
@@ -278,11 +278,11 @@ window.addEventListener('load', function() {
             // Update "more images" text based on actual count
             const moreImagesBtn = imageGrid.querySelector('.more-images span');
             if (moreImagesBtn) {
-                if (totalImages > 3) {
-                    const remaining = totalImages - 3;
+                if (totalImages > 2) {
+                    const remaining = totalImages - 2;
                     moreImagesBtn.textContent = `+${remaining} More`;
                 } else {
-                    // Hide "more images" button if 3 or fewer images
+                    // Hide "more images" button if 2 or fewer images
                     const moreImagesContainer = imageGrid.querySelector('.more-images');
                     if (moreImagesContainer) {
                         moreImagesContainer.style.display = 'none';

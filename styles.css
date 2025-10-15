@@ -2528,8 +2528,8 @@ body {
     min-width: 0;
 }
 
-/* Hide extra images beyond the first 3 */
-.event-image:nth-child(n+4) {
+/* Hide extra images beyond the first 2 */
+.event-image:nth-child(n+3) {
     display: none;
 }
 
