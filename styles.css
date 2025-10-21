@@ -2329,45 +2329,38 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 1.5rem 2rem;
     gap: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .search-container {
     display: flex;
     align-items: center;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     flex: 1;
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .search-input {
-    flex: 1;
+    width: 100%;
     padding: 0.8rem 1rem;
-    border: none;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
     outline: none;
     font-size: 1rem;
     color: #333;
+    background: white;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #009E4C;
 }
 
 .search-input::placeholder {
     color: #999;
-}
-
-.search-btn {
-    background: #009E4C;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-btn:hover {
-    background: #008a42;
 }
 
 .year-selection {
@@ -2380,11 +2373,12 @@ body {
     color: #333;
     font-weight: 500;
     font-size: 1rem;
+    white-space: nowrap;
 }
 
 .year-select {
     padding: 0.8rem 1rem;
-    border: 2px solid #e9ecef;
+    border: 1px solid #e9ecef;
     border-radius: 8px;
     background: white;
     color: #333;
@@ -2392,10 +2386,28 @@ body {
     cursor: pointer;
     outline: none;
     transition: border-color 0.3s ease;
+    min-width: 180px;
 }
 
 .year-select:focus {
     border-color: #009E4C;
+}
+
+.filter-btn {
+    background: #009E4C;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    background: #008a42;
 }
 
 /* Events List Section */

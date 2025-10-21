@@ -60,16 +60,13 @@
         <div class="container">
             <div class="filter-controls">
                 <div class="search-container">
-                    <input type="text" id="event-search" placeholder="Search events..." class="search-input">
-                    <button type="button" class="search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
+                    <input type="text" id="event-search" placeholder="Search ..." class="search-input">
                 </div>
                 <div class="year-selection">
                     <label for="year-filter">Filter by Year:</label>
                     <select id="year-filter" class="year-select">
-                        <option value="all">All Years</option>
-                        <option value="2025" selected>2025</option>
+                        <option value="all" selected>All Event Years</option>
+                        <option value="2025">2025</option>
                         <option value="2024">2024</option>
                         <option value="2023">2023</option>
                         <option value="2022">2022</option>
@@ -86,6 +83,7 @@
                         <option value="2011">2011</option>
                     </select>
                 </div>
+                <button type="button" class="filter-btn">Filter</button>
             </div>
         </div>
     </section>
@@ -437,12 +435,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.getElementById('event-search');
             const yearFilter = document.getElementById('year-filter');
+            const filterBtn = document.querySelector('.filter-btn');
             const eventItems = document.querySelectorAll('.event-item');
 
-            // Search functionality
-            searchInput.addEventListener('input', filterEvents);
-            yearFilter.addEventListener('change', filterEvents);
-
+            // Filter functionality
             function filterEvents() {
                 const searchTerm = searchInput.value.toLowerCase();
                 const selectedYear = yearFilter.value;
@@ -461,7 +457,12 @@
                 });
             }
 
-            // Initialize with 2025 events visible
+            // Event listeners
+            searchInput.addEventListener('input', filterEvents);
+            yearFilter.addEventListener('change', filterEvents);
+            filterBtn.addEventListener('click', filterEvents);
+
+            // Initialize with all events visible
             filterEvents();
         });
     </script>
